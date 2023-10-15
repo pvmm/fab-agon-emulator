@@ -140,7 +140,10 @@ const VirtualKeyToASCII VK2ASCII1252[] = {
   { VK_SECTION,      0xa7 },    // §
   { VK_NEGATION,     0xac },    // ¬
   { VK_SQUARE,       0xb2 },    // ²
+  { VK_CUBE,         0xb3 },    // ³
   { VK_MU,           0xb5 },    // µ
+  { VK_SUP_1,        0xb9 },    // ¹
+  { VK_MASCULINE_ORD,0xba },    // º
   { VK_CEDILLA_C,    0xc7 },    // Ç
   { VK_TILDE_n,      0xf1 },    // ñ
   { VK_TILDE_N,      0xd1 },    // Ñ
@@ -150,6 +153,8 @@ const VirtualKeyToASCII VK2ASCII1252[] = {
   { VK_ACUTE_u,      0xfa },    // ú
   { VK_UMLAUT_i,     0xef },    // ï
   { VK_EXCLAIM_INV,  0xa1 },    // ¡
+  { VK_CENT,         0xa2 },    // ¢
+  { VK_FEMININE_ORD, 0xaa },    // ª
   { VK_QUESTION_INV, 0xbf },    // ¿
   { VK_ACUTE_A,      0xc1 },    // Á
   { VK_ACUTE_E,      0xc9 },    // É

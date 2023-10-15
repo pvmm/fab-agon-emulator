@@ -1,2 +1,3 @@
+set keyboard 9
 load bbcbasic.bin
 run
