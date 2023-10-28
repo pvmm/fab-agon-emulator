@@ -129,10 +129,11 @@ void Keyboard::enableVirtualKeys(bool generateVirtualKeys, bool createVKQueue)
 // reset keyboard, set scancode 2 and US layout
 bool Keyboard::reset()
 {
+  printf("keyboard::reset()\n");
   memset(m_VKMap, 0, sizeof(m_VKMap));
 
   // sets default layout
-  setLayout(&USLayout);
+  setLayout(&BrazilianPortugueseLayout);
 
   m_keyboardAvailable = true;
 #if 0
@@ -340,6 +341,7 @@ VirtualKey Keyboard::scancodeToVK(uint8_t scancode, bool isExtended, KeyboardLay
     }
   }
 
+  printf("vk: %i\n", vk);
   return vk;
 }
 

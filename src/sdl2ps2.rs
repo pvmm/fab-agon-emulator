@@ -2,7 +2,7 @@
  * Convert SDL scancodes to PS/2 set 2 scancodes.
  */
 pub fn sdl2ps2(scancode: sdl2::keyboard::Scancode) -> u16 {
-    match scancode {
+    let a = match scancode {
         sdl2::keyboard::Scancode::Grave => 0x0e,
         sdl2::keyboard::Scancode::Num1 => 0x16,
         sdl2::keyboard::Scancode::Num2 => 0x1e,
@@ -106,5 +106,7 @@ pub fn sdl2ps2(scancode: sdl2::keyboard::Scancode) -> u16 {
         sdl2::keyboard::Scancode::Backslash => 0x5d,
         sdl2::keyboard::Scancode::NonUsBackslash => 0x61,
         _ => 0
-    }
+    };
+    println!("scancode: {}, {}", scancode, a);
+    return a;
 }

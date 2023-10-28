@@ -24,7 +24,7 @@ inline fabgl::Keyboard* getKeyboard() {
 void setupKeyboard() {
 	_PS2Controller.begin(PS2Preset::KeyboardPort0, KbdMode::CreateVirtualKeysQueue);
 	auto kb = getKeyboard();
-	kb->setLayout(&fabgl::UKLayout);
+	kb->setLayout(&fabgl::BrazilianPortugueseLayout);
 	kb->setCodePage(fabgl::CodePages::get(1252));
 	kb->setTypematicRateAndDelay(kbRepeatRate, kbRepeatDelay);
 }
@@ -43,7 +43,8 @@ void setKeyboardLayout(int region) {
 		case 7:	kb->setLayout(&fabgl::NorwegianLayout); break;
 		case 8:	kb->setLayout(&fabgl::JapaneseLayout);break;
 		default:
-			kb->setLayout(&fabgl::UKLayout);
+			kb->setLayout(&fabgl::BrazilianPortugueseLayout); break;
+			//kb->setLayout(&fabgl::UKLayout);
 			break;
 	}
 }
